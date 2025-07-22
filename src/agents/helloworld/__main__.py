@@ -13,7 +13,6 @@ from agents.helloworld.agent_executor import HelloWorldAgentExecutor
 
 def main():
     """Main entry point for the Hello World agent server."""
-    # --8<-- [start:AgentSkill]
     skill = AgentSkill(
         id="hello_world",
         name="Returns hello world",
@@ -21,7 +20,6 @@ def main():
         tags=["hello world"],
         examples=["hi", "hello world"],
     )
-    # --8<-- [end:AgentSkill]
 
     extended_skill = AgentSkill(
         id="super_hello_world",
@@ -31,8 +29,6 @@ def main():
         examples=["super hi", "give me a super hello"],
     )
 
-    # --8<-- [start:AgentCard]
-    # This will be the public-facing agent card
     public_agent_card = AgentCard(
         name="Hello World Agent",
         description="Just a hello world agent",
@@ -44,7 +40,6 @@ def main():
         skills=[skill],  # Only the basic skill for the public card
         supports_authenticated_extended_card=True,
     )
-    # --8<-- [end:AgentCard]
 
     # This will be the authenticated extended agent card
     # It includes the additional 'extended_skill'
