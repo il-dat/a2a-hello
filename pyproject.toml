@@ -26,6 +26,7 @@ license = "LICENSE"
 
 [project.scripts]
 a2a-host = "hosts.cli.__main__:app"
+a2a-helloworld-server = "agents.helloworld.__main__:main"
 
 [project.optional-dependencies]
 dev = [
